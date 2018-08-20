@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <Spinner
+        android:id="@+id/fuyangSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/speedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="92dp"
+        android:layout_marginStart="92dp"
+        android:text="速度"
+        app:layout_constraintBottom_toTopOf="@+id/speedSpinner"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516"
+        android:visibility="gone"/>
+
+    <Spinner
+        android:id="@+id/speedSpinner"
+        android:layout_width="52dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fuyangSpinner"
+        app:layout_constraintStart_toEndOf="@+id/fuyangSpinner"
+        app:layout_constraintTop_toTopOf="@+id/fuyangSpinner"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/angleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="角度"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/angleSpinner"
+        app:layout_constraintStart_toEndOf="@+id/speedSpinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615"
+        android:visibility="gone"/>
+
+    <Spinner
+        android:id="@+id/angleSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fuyangSpinner"
+        app:layout_constraintStart_toEndOf="@+id/speedSpinner"
+        app:layout_constraintTop_toTopOf="@+id/fuyangSpinner"
+        app:layout_constraintVertical_bias="1.0"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="确定"
+        app:layout_constraintBottom_toBottomOf="@+id/fuyangSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fuyangSpinner"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/edit_speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxWidth="220dp"
+        android:text="请叫我YOBY"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="69dp" />
+
+    <Button
+        android:id="@+id/btn_speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="确定"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_speech"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_speech"
+        app:layout_constraintTop_toTopOf="@+id/edit_speech"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/open_wheels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="open_wheels"
+        app:layout_constraintEnd_toStartOf="@+id/close_wheels"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/edit_speech" />
+
+    <Button
+        android:id="@+id/close_wheels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="close_wheels"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_speech" />
+
+    <EditText
+        android:id="@+id/angle_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:hint="angle"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/open_wheels" />
+
+    <EditText
+        android:id="@+id/speed_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="speed"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toEndOf="@+id/angle_move"
+        app:layout_constraintTop_toTopOf="@+id/angle_move" />
+
+    <EditText
+        android:id="@+id/distance_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/speed_move"
+        app:layout_constraintTop_toTopOf="@+id/speed_move" />
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="forward"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/distance_move" />
+
+    <Button
+        android:id="@+id/backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="backward"
+        app:layout_constraintBottom_toBottomOf="@+id/forward"
+        app:layout_constraintStart_toEndOf="@+id/forward"
+        app:layout_constraintTop_toTopOf="@+id/forward" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="left"
+        app:layout_constraintBottom_toBottomOf="@+id/backward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backward"
+        app:layout_constraintTop_toTopOf="@+id/backward"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="right"
+        app:layout_constraintTop_toBottomOf="@+id/forward"
+        tools:layout_editor_absoluteX="71dp" />
+
+    <Button
+        android:id="@+id/turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="turn"
+        app:layout_constraintBottom_toBottomOf="@+id/right"
+        app:layout_constraintEnd_toStartOf="@+id/halt"
+        app:layout_constraintStart_toEndOf="@+id/right"
+        app:layout_constraintTop_toTopOf="@+id/right" />
+
+    <Button
+        android:id="@+id/halt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#ff0000"
+        android:text="halt"
+        app:layout_constraintBottom_toBottomOf="@+id/turn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/turn" />
+
+    <Button
+        android:id="@+id/turn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="turn_left"
+        app:layout_constraintTop_toBottomOf="@+id/right"
+        tools:layout_editor_absoluteX="69dp" />
+
+    <Button
+        android:id="@+id/turn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="turn_right"
+        app:layout_constraintBottom_toBottomOf="@+id/turn_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/turn_left"
+        app:layout_constraintTop_toTopOf="@+id/turn_left" />
+
+    <Button
+        android:id="@+id/move_async"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="move_async"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/turn_left" />
+
+    <Button
+        android:id="@+id/turn_async"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="turn_async"
+        app:layout_constraintBottom_toBottomOf="@+id/move_async"
+        app:layout_constraintStart_toEndOf="@+id/move_async"
+        app:layout_constraintTop_toTopOf="@+id/move_async" />
+
+    <Button
+        android:id="@+id/control_async_lr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="control_async_lr"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/move_async" />
+
+    <Button
+        android:id="@+id/control_async_ud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="control_async_ud"
+        app:layout_constraintStart_toEndOf="@+id/control_async_lr"
+        app:layout_constraintTop_toTopOf="@+id/control_async_lr" />
+
+    <EditText
+        android:id="@+id/angle_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="angle_x"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/control_async_lr" />
+
+    <EditText
+        android:id="@+id/angle_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:hint="angle_y"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/angle_x"
+        app:layout_constraintStart_toEndOf="@+id/angle_x" />
+
+    <EditText
+        android:id="@+id/times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="times"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/angle_y"
+        app:layout_constraintStart_toEndOf="@+id/angle_y"
+        app:layout_constraintTop_toTopOf="@+id/angle_y"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/angle_per_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="angle_per_sec"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/times"
+        app:layout_constraintStart_toEndOf="@+id/times"
+        app:layout_constraintTop_toTopOf="@+id/times" />
+    <EditText
+        android:id="@+id/abs_angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="abs_angle"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/angle_per_sec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/angle_per_sec"
+        app:layout_constraintTop_toTopOf="@+id/angle_per_sec" />
+
+    <Button
+        android:id="@+id/control_rock_lr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="control_rock_lr"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/angle_x" />
+
+    <Button
+        android:id="@+id/reset_lr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="reset_lr"
+        app:layout_constraintBottom_toBottomOf="@+id/control_rock_lr"
+        app:layout_constraintStart_toEndOf="@+id/control_rock_lr"
+        app:layout_constraintTop_toTopOf="@+id/control_rock_lr" />
+
+
+    <Button
+        android:id="@+id/control_rock_ud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="control_rock_ud"
+        app:layout_constraintBottom_toBottomOf="@+id/reset_lr"
+        app:layout_constraintStart_toEndOf="@+id/reset_lr"
+        app:layout_constraintTop_toTopOf="@+id/reset_lr"
+        app:layout_constraintVertical_bias="1.0" />
+    <Button
+        android:id="@+id/reset_ud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="reset_ud"
+        app:layout_constraintBottom_toBottomOf="@+id/reset_lr"
+        app:layout_constraintStart_toEndOf="@+id/control_rock_ud"
+        app:layout_constraintTop_toTopOf="@+id/reset_lr"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <Button
+        android:id="@+id/control_lr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="control_lr"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/control_rock_lr" />
+
+    <Button
+        android:id="@+id/control_ud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="control_ud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/control_lr"
+        app:layout_constraintTop_toTopOf="@+id/control_lr" />
+
+
+</android.support.constraint.ConstraintLayout>
